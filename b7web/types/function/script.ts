@@ -18,3 +18,33 @@ let names: string[] = ['gustavo', 'vitor', 'dante', 'boma', 'eduarda'];
 names.forEach(function(name: string) {
     console.log(name.toUpperCase());
 });
+
+/* Type for functions */
+
+type MathFunction = (n1: number, n2: number) => number;
+
+const sum: MathFunction = (n1, n2) => {
+    return n1 + n2;
+}
+
+const sub: MathFunction = (n1, n2) => {
+    return n1 - n2;
+}
+
+/* void */
+
+function elementRemove(element: HTMLElement): void {
+    element.remove();
+}
+
+elementRemove(document.createElement("div"));
+
+/* special case */
+type AnyThing = () => void;
+
+const thing: AnyThing = () => {
+    return 'a';
+}
+
+let theReturn = thing();
+thing();

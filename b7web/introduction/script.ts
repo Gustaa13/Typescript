@@ -7,6 +7,8 @@ function calculate(n1: number, n2: number){
     return n1 + n2;
 }
 
+/* */
+
 buttom.addEventListener('click', function () {
     result.innerHTML = calculate(parseFloat(number1.value), parseFloat(number2.value)).toString();
 });
